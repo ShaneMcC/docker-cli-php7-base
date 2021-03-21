@@ -5,3 +5,6 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  allow:
+    - dependency-name: "php"
+      versions: ["7.x", "7.x.x"]
