@@ -1,4 +1,4 @@
-FROM php:7.4-cli
+FROM php:8.0.3-cli
 MAINTAINER Shane Mc Cormack <dataforce@dataforce.org.uk>
 
 COPY errors.ini /usr/local/etc/php/conf.d/errors.ini
@@ -11,6 +11,7 @@ RUN \
   docker-php-ext-install pcntl && \
   docker-php-ext-install mbstring && \
   docker-php-ext-install pdo_mysql && \
+  docker-php-ext-install mysqli && \
   docker-php-ext-install intl && \
   docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp && \
   docker-php-ext-install gd && \
